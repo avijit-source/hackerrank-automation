@@ -2,8 +2,8 @@ const puppeteer = require('puppeteer');
 
 const loginUrl = "https://www.hackerrank.com/auth/login";
 
-const email = "jogos25427@seinfaq.com";
-const password = "jagga@12345";
+const email = "YOUR_EMAIL";
+const password = "YOUR_PASS";
 
 const answer = 
 `#include <cmath>
@@ -57,37 +57,6 @@ const startBrowser = async () => {
         let questionSolved = questionSolver(page,allChallengeArr[0],answer)
 
 
-
-
-
-        //  await Promise.all([page.goto(loginUrl),page.waitForNavigation()])
-
-        //  await page.type("#input-1",email,{delay:50});
-
-        //  await page.type("#input-2",password,{delay:50});
-
-        //  await Promise.all([page.click("#tab-1-content-1 > div.login-form.auth-form.theme-m > form > div.form-item.clearfix > button > div > span",{delay:50}),page.waitForNavigation()]);
-
-        //  await Promise.all([page.click("#topics > div.dashboard-section-grid > div > div > ul > li:nth-child(1) > a > div > div",{delay:50}),page.waitForNavigation()]);
-
-
-        //  const checkel = await page.$(".filter-group:nth-child(4) .checkbox-wrap input");
-
-        //  await Promise.all([checkel.click(),page.waitForSelector("#contest-challenges-problem")])
-
-
-        //  const buttons = await page.$$("#contest-challenges-problem",{delay:50});
-
-        //  await Promise.all([buttons[0].click({delay:50}),page.waitForNavigation()]);
-
-        //  await page.waitForSelector(".checkbox-input");
-
-        //  const el = await page.$(".checkbox-input");
-
-        //  await el.click();
-        // await Promise.all([page.click(".monaco-editor.no-user-select.vs",{delay:50}),page.waitForNavigation()]);
-
-        // await Promise.all([page.click(".checkbox-input"),page.waitForSelector(".custom-input .custominput")]);
     } catch (e) {
         console.log(e);
     }
@@ -131,10 +100,6 @@ async function questionSolver(page, question, answer) {
     await page.keyboard.down("V",{delay:100});
 
     await page.keyboard.up("Control");
-
-    // await page.click(".hr-monaco__run-code",{delay:50});
-
-    // await page.waitForNavigation();
 
     await page.click(".hr-monaco-submit",{delay:50})
 
